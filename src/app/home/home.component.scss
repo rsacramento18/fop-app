@@ -1,0 +1,21 @@
+@import '../../styles.scss';
+
+:host {
+    flex: 1;
+}
+
+.logo-fop img{
+   height: 15rem; 
+   margin: 2rem;
+}
+
+.content-justify{
+    margin: 10rem 0 5rem;
+    justify-content: center;
+}
+
+
+
+.h5 {
+    margin-top: 2rem;
+}
