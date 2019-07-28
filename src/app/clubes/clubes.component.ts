@@ -9,12 +9,12 @@ import { ClubService } from '../services/club.service';
   styleUrls: ['./clubes.component.scss']
 })
 export class ClubesComponent implements OnInit {
-  private allClubs: Club[] = [];
-  private currentClub: Club;
-  private isClubHover = false;
+  allClubs: Club[] = [];
+  currentClub: Club;
+  isClubHover = false;
 
   constructor(private clubService: ClubService) {
-    this.clubService.getListClub().subscribe((res: Club[]) => {
+    this.clubService.getListClube().subscribe((res: Club[]) => {
       this.allClubs = res;
       this.currentClub = this.allClubs[0];
     })

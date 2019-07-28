@@ -7,7 +7,7 @@
   <div class="row clubSelection">
     <div class="col-lg-1" *ngFor="let club of allClubs">
       <div (click)="showClub(club)" class="club">
-        <img src="../../assets/{{club.imagem}}" (click)="show(club)"  alt="{{club.sigla}}" class="mx-auto d-block"/>
+        <img src="../../assets/img/img_clubes/{{club.logo}}" (click)="showClub(club)"  alt="{{club.sigla}}" class="mx-auto d-block"/>
         <div class="clubHover">
           <h6 class="h6">{{club.sigla}}</h6>
         </div>

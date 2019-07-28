@@ -1,8 +1,19 @@
+import { Federacao } from './federacao';
+
 export class Club {
-    nome: String;
-    sigla: String;
-    morada: String;
-    imagem: String;
-    site: String;
-    email: String;
+    id: number;
+    federacao: Federacao;
+    sigla: string;
+    nome: string;
+    morada: string;
+    logo: string;
+    website: string;
+    email: string;
+    quota: string;
+    portes: string;
+    ativo: boolean;
+
+    constructor() {
+        this.federacao = new Federacao;
+    }
 }

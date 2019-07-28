@@ -1,3 +1,14 @@
-<p>
-  exposicoes works!
-</p>
+<div class="container top-margin-2">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="h3" translate>exibitions.title</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12" *ngFor="let exibition of allExposicoes">
+      <app-exposicao [exposicao]="exibition"></app-exposicao>
+    </div>
+  </div>
+</div>
+
+
