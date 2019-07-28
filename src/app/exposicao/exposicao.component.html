@@ -2,16 +2,19 @@
   <div class="col-lg-12">
     <h3 class="h3">{{exposicao.titulo}}</h3>
   </div>
-  <div class="col-lg-12">
-    <p class="p">{{exposicao.morada}}</p>
-    <p class="p">{{exposicao.nib}}</p>
-    <p class="p">{{exposicao.descricao}}</p>
-    <p class="p">{{exposicao.tipo.descricao}}</p>
-    <p class="p">{{exposicao.datas.fimExposicao}}</p>
-    <p class="p">{{exposicao.datas.fimExposicao}}</p>
-    <p class="p">{{exposicao.datas.inicioInscricao}}</p>
-    <p class="p">{{exposicao.datas.fimInscricao}}</p>
-    <p class="p">{{exposicao.datas.inicioJulgamento}}</p>
-    <p class="p">{{exposicao.datas.fimJulgamento}}</p>
+</div>
+<div class="row">
+  <div class="col-lg-8 cartaz_exposicao">
+    <img src="../../assets/img/cartaz_exposicao/{{exposicao.cartaz}}" alt="cartaz exposição">
+  </div>
+  <div class="col-lg-4">
+    <div class="row">
+      <div class="col-lg-12">
+        <h5 class="h5">Fim Exposição: {{exposicao.datas.fimExposicao}}</h5>
+      </div>
+      <div class="col-lg-12">
+        <h5 class="h5">Inicio Exposição: {{exposicao.datas.inicioExposicao}}</h5>
+      </div>
+    </div>
   </div>
 </div>
