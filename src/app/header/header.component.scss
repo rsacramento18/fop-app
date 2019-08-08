@@ -8,10 +8,6 @@
     background-color: $bg-primary-color;
 }
 
-.menu-align {
-    text-align: center;
-}
-
 .logo {
     background-color: $bg-primary-color;
     width: 5rem;
@@ -27,13 +23,16 @@
     background-color: $bg-primary-color;
     margin: 0 auto;
     display: inline-block;
+    width: 100%;
+    text-align: right;
 }
 
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: right;
+    height: 5rem;
 }
 
 .menu ul li {
@@ -41,27 +40,55 @@
 }
 
 .menu ul li a {
-    color: $white;
+    color: $font-color;
+    font-size: 1.3em;
     display: block;
-    padding: 1.75rem 1rem;
+    margin: 1.5rem 1rem;
 }
 
 .menu ul li a:hover {
-    background-color: $darker-blue;
-    text-decoration: none;
+    border-bottom: 2px solid $font-color;
+    text-decoration: none
 }
 
 .login {
-    color: $white;
+    color: $bg-primary-color;
+    font-size: 1.3em;
+    background-color: $bg-secondary-color;
 }
 
-.login span {
-    padding: 1.75rem 1rem;
-    float: right;
+.login ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    height: 4.5rem;
+}
+
+.login ul li  {
+    display: inline-block;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.login span:hover {
-   text-decoration: underline; 
-   font-weight: 600;
+
+
+.login ul li a{
+    margin: 1.5rem 1rem;
+    display: block;
+}
+
+.login ul li a:hover {
+    border-bottom: 2px solid $white;
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 2px solid $font-color;
+    text-decoration: none;
+}
+
+.active-login {
+    border-bottom: 2px solid $white;
+    text-decoration: none;
 }

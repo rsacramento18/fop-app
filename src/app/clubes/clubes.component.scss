@@ -4,45 +4,70 @@
     flex: 1;
 }
 
+.fullscreen {
+    height: 120vh;
+}
+
+.title {
+  text-align: center;
+}
+
+
 .clubSelection {
-    border-bottom: 4px double $light-green;
-    margin: 2rem 0;
-
+  margin: 1rem 1.95rem;
+  color: $white;
+  border-radius: 5px;
+  background-color: $white;
+  display: inline-block;
+  text-align: center;
 }
 
-.club {
-    margin: 1rem 0;
-    height: 3rem;
-    cursor: pointer;
-}
-.club img {
-    height: 3rem;
+.clubSelection img {
+  max-width: 5rem;
+  height: 5rem;
+  cursor: pointer;
 }
 
-.clubHover {
-    display: none;
+.separator {
+  margin: 4rem auto;
+  border-bottom: 1px solid $bg-secondary-color;
+  width: 100rem;
+  text-align: center;
 }
 
-.club:hover > .clubHover {
-    display: block;
+.separator-vertical {
+  border-right: 1px solid $bg-secondary-color;
+  width: 1px;
+  height: 100%
 }
 
-
-::-webkit-scrollbar {
-  width: 5px;
+.data-logo img{
+  width: 10rem;
+  margin: 0 auto;
+  display: block;
 }
 
-::-webkit-scrollbar-track {
-  background-color: $black;
-  border-left: 2px solid $white;
-  border-right: 2px solid $white;
+.data-title h1 {
+  text-align: center;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: $black;
-  height: 2px;
+.club-data-section {
+  padding: 1rem;
+  border: 2px solid $bg-secondary-color;
+  border-radius: 5px;
+  height: 100%;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: $bg-primary-color;
+.data {
+  margin: 0.5rem 0;
+}
+
+.data div h5 {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.field-data {
+  background-color: $bg-secondary-color;
+  color: white;
 }

@@ -1,0 +1,26 @@
+@import '../../styles.scss';
+
+.fullscreen {
+    height: 100vh;
+}
+
+.title h2 {
+    text-align: center;
+    color: $font-color;
+}
+
+.contacts-title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+.field-title h5 {
+    font-size: 1em;
+    text-align: right;
+}
+
+.data-small h5 {
+    font-size: 1em;
+    text-align: left;
+}

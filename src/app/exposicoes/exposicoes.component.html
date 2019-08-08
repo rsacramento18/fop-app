@@ -1,12 +1,88 @@
-<div class="container top-margin-2">
+<div id="exposicoes" class="container-fluid header-margin">
   <div class="row">
-    <div class="col-lg-12">
-      <h3 class="h3" translate>exibitions.title</h3>
+    <div class="col-lg-12 bottom-margin-2 top-margin-2">
+      <h3 class="h3 title" translate>exibitions.title</h3>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12" *ngFor="let exibition of allExposicoes">
-      <app-exposicao [exposicao]="exibition"></app-exposicao>
+  <div class="row margin-10">
+    <div class="col-lg-6 bottom-margin-2" *ngFor="let exibition of allExposicoes">
+
+      <div class="row">
+        <div class="col-lg-12 exposicao-title">
+          <h2 class="h2">{{exibition.titulo}}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 cartaz-exposicao">
+          <img src="../../assets/img/cartaz_exposicao/{{exibition.cartaz}}" onError="this.src='../../assets/not_found.png'" alt="cartaz exposição">
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="h3" translate>exibitions.titleSingle</h3>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-lg-3 field-data">
+              <h5 class="h5" translate>exibitions.beginExibition</h5>
+            </div>
+            <div class="col-lg-9">
+              <h5 class="h5">{{exibition.datas.inicioExposicao}}</h5>
+            </div>
+          </div>
+          <div class="row data bottom-margin-2">
+            <div class="col-lg-3 field-data">
+              <h5 class="h5" translate>exibitions.endExibition</h5>
+            </div>
+            <div class="col-lg-9">
+              <h5 class="h5">{{exibition.datas.fimExposicao}}</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="h3" translate>exibitions.inscricao</h3>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-lg-3 field-data">
+              <h5 class="h5" translate>exibitions.beginExibition</h5>
+            </div>
+            <div class="col-lg-9">
+              <h5 class="h5">{{exibition.datas.inicioInscricao}}</h5>
+            </div>
+          </div>
+          <div class="row data bottom-margin-2">
+            <div class="col-lg-3 field-data">
+              <h5 class="h5" translate>exibitions.endExibition</h5>
+            </div>
+            <div class="col-lg-9">
+              <h5 class="h5">{{exibition.datas.fimInscricao}}</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="h3" translate>exibitions.julgamento</h3>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-lg-3 field-data">
+              <h5 class="h5" translate>exibitions.beginExibition</h5>
+            </div>
+            <div class="col-lg-9">
+              <h5 class="h5">{{exibition.datas.inicioJulgamento}}</h5>
+            </div>
+          </div>
+          <div class="row data bottom-margin-2">
+            <div class="col-lg-3 field-data">
+              <h5 class="h5" translate>exibitions.endExibition</h5>
+            </div>
+            <div class="col-lg-9">
+              <h5 class="h5">{{exibition.datas.fimJulgamento}}</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>

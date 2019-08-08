@@ -1,27 +1,24 @@
 <div class="container-fluid fixed-header">
   <div class="row bg-color">
-    <div class="col-lg-3">
-    </div>
-    <div class="col-lg-6 menu-align">
-
-      <div class="logo">
-          <img src="../../assets/logoFOP.png" alt="logo" />
-      </div>
+    <div class="col-lg-7">
       <div class="menu">
         <ul>
-          <li><a routerLink="/" translate>nav.home</a></li>
-          <li><a routerLink="/federacao/objectivos" translate>nav.federation</a></li>
-          <li><a routerLink="/clubes" translate>nav.clubs</a></li>
-          <li><a routerLink="/exposicoes" translate>nav.expositions</a></li>
+          <li><a href="#home" translate>nav.home</a></li>
+          <li><a href="#federacao" translate>nav.federation</a></li>
+          <li><a href="#clubes" translate>nav.clubs</a></li>
+          <li><a href="#exposicoes" translate>nav.expositions</a></li>
           <!-- <li><a routerLink="/gestfop"  translate>nav.gestfop</a></li> -->
           <li><a href="https://appfop.fop.com.pt" target="_blank"  translate>nav.gestfop</a></li>
           <!-- <li><a routerLink="/ctj" translate>nav.ctj</a></li> -->
-          <li><a routerLink="/contactos" translate>nav.contacts</a></li>
+          <li><a href="#contactos" translate>nav.contacts</a></li>
         </ul>
       </div>
     </div>
-    <div class="col-lg-3 login">
-      <span translate>login.sign</span>
+    <div class="col-lg-5 login">
+      <ul>
+        <li><a routerLinkActive="active-login" translate>login.sign</a></li>
+      </ul>
+      <!-- <span translate>login.sign</span> -->
     </div>
   </div>
 </div>

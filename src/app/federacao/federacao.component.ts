@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FederacaoComponent implements OnInit {
 
+  component = 1;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showComponent(num : number) {
+    this.component = num;
   }
 
 }

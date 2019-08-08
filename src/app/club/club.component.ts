@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Club } from '../entities/club';
+import { ClubeAdministracao } from '../entities/clubeAdministracao';
+import { ClubeAdministracaoService } from '../services/clube.administracao.service';
 
 @Component({
   selector: 'app-club',
@@ -7,9 +9,10 @@ import { Club } from '../entities/club';
   styleUrls: ['./club.component.scss']
 })
 export class ClubComponent implements OnInit {
-  @Input() club: Club;
-
-  constructor() { }
+  @Input() clube: Club;
+  @Input() administracaoClube: ClubeAdministracao;
+  
+  constructor(private clubeAdministracaoService: ClubeAdministracaoService) { }
 
   ngOnInit() {
   }

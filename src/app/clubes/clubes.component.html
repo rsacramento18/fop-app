@@ -1,22 +1,113 @@
-<div class="container top-margin-2">
+<div id="clubes" class="container-fluid">
   <div class="row">
-    <div class="col-lg-12">
-      <h3 class="h3" translate>clubs.title</h3>
+    <div class="col-lg-12 top-margin-2 bottom-margin-2 title">
+      <h2 class="h2" translate>clubs.title</h2>
     </div>
   </div>
-  <div class="row clubSelection">
-    <div class="col-lg-1" *ngFor="let club of allClubs">
-      <div (click)="showClub(club)" class="club">
-        <img src="../../assets/img/img_clubes/{{club.logo}}" (click)="showClub(club)"  alt="{{club.sigla}}" class="mx-auto d-block"/>
-        <div class="clubHover">
-          <h6 class="h6">{{club.sigla}}</h6>
-        </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-1 clubSelection" *ngFor="let club of allClubs" (click)="showClub(club)">
+        <img src="../../assets/img/img_clubes/{{club.logo}}"/>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <app-club [club]="currentClub"></app-club>
+  <div class="separator"></div>
+  <div class="row margin-10" *ngIf="this.currentClub !== undefined">
+    <div class="col-lg-12 data-logo">
+      <img class="logo" src="../../assets/img/img_clubes/{{this.currentClub.logo}}" alt="logo_{{this.currentClub.sigla}}">
+    </div>
+    <div class="col-lg-12 data-title">
+      <h1 class="h1">{{this.currentClub.sigla}}</h1>
+    </div>
+    <div class="col-lg-4">
+      <div class="club-data-section">
+        <div class="row club-data">
+          <div class="col-lg-12">
+            <h3 class="h3" translate>clubs.clubDataTitle</h3>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.nome</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{this.currentClub.nome}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.federacao</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{this.currentClub.federacao.nome}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.morada</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{this.currentClub.morada}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.website</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{this.currentClub.website}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.email</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{this.currentClub.email}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4" *ngFor="let administracao of administracaoClube">
+      <div class="club-data-section">
+        <div class="row club-data">
+          <div class="col-lg-12">
+            <h3 class="h3" translate>{{administracao.titulo}}</h3>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.nome</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{administracao.nome}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.email</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{administracao.email}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.contacto</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{administracao.contacto}}</h5>
+          </div>
+        </div>
+        <div class="row data">
+          <div class="col-lg-3 field-data">
+            <h5 class="h5" translate>clubs.morada</h5>
+          </div>
+          <div class="col-lg-9">
+            <h5 class="h5">{{administracao.morada}}</h5>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

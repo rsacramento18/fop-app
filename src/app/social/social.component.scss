@@ -4,3 +4,86 @@
     margin: 1rem 0;
     font-weight: 600;
 }
+
+.fullscreen {
+    height: 100vh;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.menu-social {
+    text-align: left;
+}
+
+.menu-social ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-social ul li {
+    text-decoration: none;
+    margin: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-social ul li a {
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.menu-social ul li:hover > a,
+.active-social {
+    border-bottom: 2px solid $font-color;
+}
+
+.orgao {
+    margin: 2rem 0;
+}
+
+.no-right-margin {
+    margin-right: 0;
+}
+
+.photo {
+    text-align: right;
+}
+
+.photo img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.photo-small img {
+   height: 7rem; 
+   width: 7rem;
+   margin: 1rem 0;
+   border-radius: 100%;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.data {
+    margin: 1.5rem 0;
+    color: #000000;
+}
+
+.data-small h5 {
+    font-size: 1em;
+}
+
+.data-small h5.role {
+    font-weight: 600;
+}
+
+.role {
+    text-align: right;
+}
+
+.name {
+    text-align: left;
+    color: #000000;
+}

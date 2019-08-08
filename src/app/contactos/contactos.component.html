@@ -1,3 +1,35 @@
-<p>
-  contactos works!
-</p>
+<div id="contactos" class="container-fluid fullscreen">
+  <div class="row vertical-align">
+    <div class="col-lg-12 title">
+      <h2 class="h2" translate>contacts.title</h2>
+    </div>
+  </div>
+
+  <div class="row top-margin-2 bottom-margin-2" *ngFor="let contacto of contactos">
+    <div class="col-lg-6">
+      <h5 class="h5 contacts-title" translate>{{contacto.titulo}}</h5>
+    </div>
+    <div class="col-lg-6"></div>
+    <div class="col-lg-6 field-title"> 
+      <h5 class="h5" translate>contacts.name</h5>
+    </div>
+    <div class="col-lg-6 data-small">
+      <h5 class="h5">{{contacto.nome}}</h5>
+    </div>
+
+    <div class="col-lg-6 field-title">
+      <h5 class="h5" translate>contacts.email</h5>
+    </div>
+    <div class="col-lg-6 data-small">
+      <h5 class="h5">{{contacto.email}}</h5>
+    </div>
+
+    <div class="col-lg-6 field-title">
+      <h5 class="h5" translate>contacts.contact</h5>
+    </div>
+    <div class="col-lg-6 data-small">
+      <h5 class="h5">{{contacto.contacto}}</h5>
+    </div>
+
+  </div>
+</div>

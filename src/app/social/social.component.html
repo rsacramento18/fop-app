@@ -1,18 +1,42 @@
-<div class="row">
-  <div class="col-lg-12">
-    <h3 class="h3" translate>social.title</h3>
-  </div>
-</div>
-<div class="row">
-  <div [ngClass]="{'col-lg-12':orgao.section==1,  'col-lg-6':orgao.section==2, 'col-lg-3':orgao.section==3, 'col-12':orgao.section==4}"  *ngFor="let orgao of orgaos ; let i = index" [attr.data-index]="i">
-
-    <h4 class="h4 title-social" *ngIf="i==0" translate>social.direction</h4>
-    <h4 class="h4 title-social" *ngIf="i==7" translate>social.assembly</h4>
-    <h4 class="h4 title-social" *ngIf="i==10" translate>social.fiscal</h4>
-    <h4 class="h4 title-social" *ngIf="i==13" translate>social.juridicial</h4>
-    <h4 class="h4 title-social" *ngIf="i==16" translate>social.disciplinar</h4>
-    <h4 class="h4 title-social" *ngIf="i==19" translate>social.tecnic</h4>
-
-    <app-orgao [orgao]="orgao"></app-orgao>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4 fullscreen">
+        <div class="menu-social vertical-align">
+          <ul>
+            <li><a (click)="showOrgao(1)" [ngClass]="{'active': orgaoActive == 1}" translate>social.direction</a></li>
+            <li><a (click)="showOrgao(2)" [ngClass]="{'active': orgaoActive == 2}" translate>social.assembly</a></li>
+            <li><a (click)="showOrgao(3)" [ngClass]="{'active': orgaoActive == 3}" translate>social.fiscal</a></li>
+            <li><a (click)="showOrgao(4)" [ngClass]="{'active': orgaoActive == 4}" translate>social.juridicial</a></li>
+            <li><a (click)="showOrgao(5)" [ngClass]="{'active': orgaoActive == 5}" translate>social.disciplinar</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="col-lg-8 fullscreen vertical-align">
+      <div class="row" *ngIf="orgaoActive==1">
+        <div class="col-lg-6" *ngFor="let orgao of orgaos1">
+          <div class="row top-margin-2 bottom-margin-2">
+            <div class="col-lg-5 photo">
+              <img src="{{orgao.photo}}">
+            </div>
+            <div class="col-lg-7 data">
+              <h5 class="h5 bold">{{orgao.role}}</h5>
+              <h5 class="h5">{{orgao.name}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="orgaoActive > 1">
+        <div class="col-lg-12" *ngFor="let orgao of orgaos2">
+          <div class="row top-margin-2 bottom-margin-2" *ngIf="orgao.section == orgaoActive">
+            <div class="col-lg-6">
+              <h5 class="h5 role bold">{{orgao.role}}</h5>
+            </div>
+            <div class="col-lg-6">
+              <h5 class="h5 name">{{orgao.name}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

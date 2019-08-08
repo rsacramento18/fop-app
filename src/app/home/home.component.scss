@@ -4,18 +4,36 @@
     flex: 1;
 }
 
+.fullscreen {
+    height: 92vh;
+}
+
+.fop-title {
+    text-align: left;
+    color: $font-color;
+}
+
+.logo-fop {
+    background-color: $bg-secondary-color;
+}
+
 .logo-fop img{
-   height: 15rem; 
-   margin: 2rem;
+   height: 20rem; 
 }
 
 .content-justify{
-    margin: 10rem 0 5rem;
     justify-content: center;
 }
 
 
-
 .h5 {
     margin-top: 2rem;
+}
+
+
+.scroll-down {
+    position:relative;
+    font-size: 5em;
+    top: 7rem;
+    left: 35rem;
 }
