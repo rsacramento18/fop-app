@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./objectivos.component.scss']
 })
 export class ObjectivosComponent implements OnInit {
-  private entryText: String[] = [];
+  entryText: String[] = [];
 
   constructor() { }
 

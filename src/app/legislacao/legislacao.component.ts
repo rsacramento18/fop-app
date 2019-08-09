@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./legislacao.component.scss']
 })
 export class LegislacaoComponent implements OnInit {
-  private entryText:String[] = [];
+  entryText:String[] = [];
 
   constructor() { }
 

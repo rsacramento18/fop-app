@@ -7,7 +7,7 @@ import { Document } from '../entities/document';
   styleUrls: ['./documentacao.component.scss']
 })
 export class DocumentacaoComponent implements OnInit {
-  private documents: Document[] = [];
+  documents: Document[] = [];
   private doc1 = new Document();
   private doc2 = new Document();
   private doc3 = new Document();

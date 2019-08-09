@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estatutos.component.scss']
 })
 export class EstatutosComponent implements OnInit {
-  private text: String;
+  text: String;
 
   constructor() { }
 
