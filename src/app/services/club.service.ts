@@ -6,7 +6,7 @@ import { Club } from '../entities/club';
   providedIn: 'root'
 })
 export class ClubService {
-  private baseUrl: string = "http://localhost:8080/api/clubes";
+  private baseUrl: string = "http://localhost:8080/fop-core/api/clubes";
 
   constructor(private httpClient: HttpClient) { }
 

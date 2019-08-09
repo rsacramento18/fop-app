@@ -8,7 +8,7 @@ import { ValueTransformer } from '@angular/compiler/src/util';
   providedIn: 'root'
 })
 export class ClubeAdministracaoService {
-  private baseUrl: string = "http://localhost:8080/api/clubeadministracao";
+  private baseUrl: string = "http://localhost:8080/fop-core/api/clubeadministracao";
 
   constructor(private httpClient: HttpClient) { }
 
