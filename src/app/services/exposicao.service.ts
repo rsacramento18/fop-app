@@ -6,7 +6,7 @@ import { Exposicao } from '../entities/exposicao';
   providedIn: 'root'
 })
 export class ExposicaoService {
-  private baseUrl: string = "http://localhost:8080/fop-core/api/exposicoes";
+  private baseUrl: string = "http://35.242.157.26:8080/fop-core/api/exposicoes";
 
   constructor(private httpClient: HttpClient) { }
 
