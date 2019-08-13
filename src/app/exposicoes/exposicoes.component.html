@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row margin-10">
-    <div class="col-lg-6 bottom-margin-2" *ngFor="let exibition of allExposicoes">
+    <div class="col-lg-12 bottom-margin-2" *ngFor="let exibition of allExposicoes">
 
       <div class="row">
         <div class="col-lg-12 exposicao-title">
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6 cartaz-exposicao">
+        <div class="col-lg-4 cartaz-exposicao">
           <img src="../../assets/img/cartaz_exposicao/{{exibition.cartaz}}" onError="this.src='../../assets/not_found.png'" alt="cartaz exposição">
         </div>
         <div class="col-lg-6">
@@ -27,7 +27,7 @@
               <h5 class="h5" translate>exibitions.beginExibition</h5>
             </div>
             <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.inicioExposicao}}</h5>
+              <h5 class="h5">{{exibition.datas.inicioExposicao | date: 'dd/MM/yyyy'}}</h5>
             </div>
           </div>
           <div class="row data bottom-margin-2">
@@ -35,7 +35,7 @@
               <h5 class="h5" translate>exibitions.endExibition</h5>
             </div>
             <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.fimExposicao}}</h5>
+              <h5 class="h5">{{exibition.datas.fimExposicao | date: 'dd/MM/yyyy'}}</h5>
             </div>
           </div>
           <div class="row">
@@ -48,7 +48,7 @@
               <h5 class="h5" translate>exibitions.beginExibition</h5>
             </div>
             <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.inicioInscricao}}</h5>
+              <h5 class="h5">{{exibition.datas.inicioInscricao | date: 'dd/MM/yyyy'}}</h5>
             </div>
           </div>
           <div class="row data bottom-margin-2">
@@ -56,7 +56,7 @@
               <h5 class="h5" translate>exibitions.endExibition</h5>
             </div>
             <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.fimInscricao}}</h5>
+              <h5 class="h5">{{exibition.datas.fimInscricao | date: 'dd/MM/yyyy'}}</h5>
             </div>
           </div>
           <div class="row">
@@ -69,7 +69,7 @@
               <h5 class="h5" translate>exibitions.beginExibition</h5>
             </div>
             <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.inicioJulgamento}}</h5>
+              <h5 class="h5">{{exibition.datas.inicioJulgamento | date: 'dd/MM/yyyy'}}</h5>
             </div>
           </div>
           <div class="row data bottom-margin-2">
@@ -77,7 +77,7 @@
               <h5 class="h5" translate>exibitions.endExibition</h5>
             </div>
             <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.fimJulgamento}}</h5>
+              <h5 class="h5">{{exibition.datas.fimJulgamento | date: 'dd/MM/yyyy'}}</h5>
             </div>
           </div>
 

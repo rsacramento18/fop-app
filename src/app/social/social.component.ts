@@ -22,8 +22,6 @@ export class SocialComponent implements OnInit {
   private orgao3 = new Orgao();
   private orgao4 = new Orgao();
   private orgao5 = new Orgao();
-  private orgao6 = new Orgao();
-  private orgao7 = new Orgao();
   private orgao8 = new Orgao();
   private orgao9 = new Orgao();
   private orgao10 = new Orgao();
@@ -46,60 +44,49 @@ export class SocialComponent implements OnInit {
   ngOnInit(
   ) {
 
+    this.orgao1.section=1;
+    this.orgao1.role="Presidente";
+    this.orgao1.name="Eutiquio Silva";
+    this.orgao1.photo="../../assets/img/photos/Eutiquio_Silva.jpg";
+    this.orgao1.email="eutiquio.silva@fop.com.pt";
+
+    this.orgaos1.push(this.orgao1);
+
     this.orgao2.section=1;
-    this.orgao2.role="Vice-Presidente Administrativo";
-    this.orgao2.name="Viriato Guilherme Martins";
-    this.orgao2.photo="../../assets/img/photos/Viriato_Martins.jpg";
-    this.orgao2.club="COP";
-    this.orgao2.email="viriato.martins@fop.com.pt";
+    this.orgao2.role="Vice-Presidente Técnico";
+    this.orgao2.name="Adelino Charana Vieira";
+    this.orgao2.photo="../../assets/img/photos/Adelino_Vieira.jpg";
+    this.orgao2.club="GOC";
+    this.orgao2.email="adelino.vieira@fop.com.pt";
 
     this.orgaos1.push(this.orgao2);
-    
+
     this.orgao3.section=1;
-    this.orgao3.role="Vice-Presidente Técnico";
-    this.orgao3.name="Adelino Charana Vieira";
-    this.orgao3.photo="../../assets/img/photos/Adelino_Vieira.jpg";
-    this.orgao3.club="GOC";
-    this.orgao3.email="adelino.vieira@fop.com.pt";
+    this.orgao3.role="Secretário";
+    this.orgao3.name="Luís Bandeira";
+    this.orgao3.photo="../../assets/img/photos/Luis_Bandeira.jpg";
+    this.orgao3.email="luis.bandeira@fop.com.pt";
 
     this.orgaos1.push(this.orgao3);
 
     this.orgao4.section=1;
-    this.orgao4.role="Secretário";
-    this.orgao4.name="Luís Bandeira";
-    this.orgao4.photo="../../assets/img/photos/Luis_Bandeira.jpg";
-    this.orgao4.club="GOC";
-    this.orgao4.email="luis.bandeira@fop.com.pt";
+    this.orgao4.role="Tesoureiro";
+    this.orgao4.name="António Júlio";
+    this.orgao4.photo="../../assets/img/photos/Antonio_Julio.jpg";
+    this.orgao4.club="COCR";
+    this.orgao4.email="antonio.julio@fop.com.pt";
 
     this.orgaos1.push(this.orgao4);
 
     this.orgao5.section=1;
-    this.orgao5.role="Tesoureiro";
-    this.orgao5.name="Eutiquio Silva";
-    this.orgao5.photo="../../assets/img/photos/Eutiquio_Silva.jpg";
-    this.orgao5.club="COP";
-    this.orgao5.email="eutiquio.silva@fop.com.pt";
+    this.orgao5.role="Vogal";
+    this.orgao5.name="Marco Domingos";
+    this.orgao5.photo="../../assets/img/photos/Marco_Domingos.jpg";
+    this.orgao5.club="COCR";
+    this.orgao5.email="marco.domingos@fop.com.pt";
 
     this.orgaos1.push(this.orgao5);
 
-
-    this.orgao6.section=1;
-    this.orgao6.role="Vogal";
-    this.orgao6.name="Marco Domingos";
-    this.orgao6.photo="../../assets/img/photos/Marco_Domingos.jpg";
-    this.orgao6.club="COCR";
-    this.orgao6.email="marco.domingos@fop.com.pt";
-
-    this.orgaos1.push(this.orgao6);
-
-    this.orgao7.section=1;
-    this.orgao7.role="Vogal";
-    this.orgao7.name="António Júlio";
-    this.orgao7.photo="../../assets/img/photos/Antonio_Julio.jpg";
-    this.orgao7.club="COCR";
-    this.orgao7.email="antonio.julio@fop.com.pt";
-
-    this.orgaos1.push(this.orgao7);
 
     this.orgao8.section=2;
     this.orgao8.role="Presidente";

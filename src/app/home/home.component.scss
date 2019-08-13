@@ -5,20 +5,25 @@
 }
 
 .fullscreen {
-    height: 92vh;
+    height: 91.5vh;
+    background-color: $bg-secondary-color;
 }
 
 .fop-title {
-    text-align: left;
-    color: $font-color;
+    color: $bg-primary-color;
+}
+
+.fop-title h1,
+.fop-title h3 {
+    text-align: center;
 }
 
 .logo-fop {
     background-color: $bg-secondary-color;
 }
 
-.logo-fop img{
-   height: 20rem; 
+.text {
+    color: $bg-primary-color;
 }
 
 .content-justify{
@@ -27,13 +32,5 @@
 
 
 .h5 {
-    margin-top: 2rem;
-}
-
-
-.scroll-down {
-    position:relative;
-    font-size: 5em;
-    top: 7rem;
-    left: 35rem;
+    // margin-top: 2rem;
 }
