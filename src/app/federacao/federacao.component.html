@@ -3,8 +3,9 @@
     <div class="col-lg-3 fullscreen left-padding-5">
         <div class="menu-federation vertical-align">
           <ul>
-            <li><a (click)="showComponent(1)" [ngClass]="{'active': component == 1}" translate>federation.objectives</a></li>
-            <li><a (click)="showComponent(2)" [ngClass]="{'active': component == 2}" translate>federation.social</a></li>
+            <!-- <li><a (click)="showComponent(1)" [ngClass]="{'active': component == 1}" translate>federation.objectives</a></li> -->
+            <li><a (click)="showComponent(1)" [ngClass]="{'active': component == 1}" translate>federation.social</a></li>
+            <li><a (click)="showComponent(2)" [ngClass]="{'active': component == 2}" translate>federation.contacts</a></li>
             <li><a (click)="showComponent(3)" [ngClass]="{'active': component == 3}" translate>federation.statutes</a></li>
             <!-- <li><a (click)="showComponent(1)" [ngClass]="{'active': component == 4}" translate>federation.documentation</a></li>
             <li><a (click)="showComponent(1)" [ngClass]="{'active': component == 4}" translate>federation.legislation</a></li> -->
@@ -12,8 +13,9 @@
         </div>
     </div>
     <div class="col-lg-9 min-fullscreen right-padding-5 vertical-align"> 
-      <app-objectivos *ngIf="component == 1"></app-objectivos>
-      <app-social *ngIf="component == 2"></app-social>
+      <!-- <app-objectivos *ngIf="component == 1"></app-objectivos> -->
+      <app-social *ngIf="component == 1"></app-social>
+      <app-contactos *ngIf="component == 2"></app-contactos>
       <app-estatutos *ngIf="component == 3"></app-estatutos>
     </div>
   </div>

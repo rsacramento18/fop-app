@@ -7,22 +7,23 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="col-lg-1 clubSelection" *ngFor="let club of allClubs" (click)="showClub(club)">
+        <h5 class="h5">{{club.sigla}}</h5>
         <img src="../../assets/img/img_clubes/{{club.logo}}"/>
       </div>
     </div>
   </div>
   <div class="separator"></div>
-  <div class="row" *ngIf="this.currentClub !== undefined">
-    <div class="col-lg-12 data-logo">
+  <div class="row bottom-margin-2" *ngIf="this.currentClub !== undefined">
+    <div class="col-lg-4 data-logo data-title">
+      <h1 class="h1">{{this.currentClub.sigla}}</h1>
       <img class="logo" src="../../assets/img/img_clubes/{{this.currentClub.logo}}" alt="logo_{{this.currentClub.sigla}}">
     </div>
-    <div class="col-lg-12 data-title">
-      <h1 class="h1">{{this.currentClub.sigla}}</h1>
-    </div>
-    <div class="col-lg-6 col-md-12 col-sm-12 col-12 bottom-margin-2 top-margin-2">
-      <div class="club-data-section">
+    <!-- <div class="col-lg-4 data-title">
+    </div> -->
+    <div class="col-lg-8 col-md-12 col-sm-12 col-12 bottom-margin-2">
+      <div>
         <div class="row club-data">
-          <div class="col-lg-12">
+          <div class="col-lg-12 club-data-title">
             <h3 class="h3" translate>clubs.clubDataTitle</h3>
           </div>
         </div>
@@ -32,14 +33,6 @@
           </div>
           <div class="col-lg-9">
             <h5 class="h5">{{this.currentClub.nome}}</h5>
-          </div>
-        </div>
-        <div class="row data">
-          <div class="col-lg-3 field-data">
-            <h5 class="h5" translate>clubs.federacao</h5>
-          </div>
-          <div class="col-lg-9">
-            <h5 class="h5">{{this.currentClub.federacao.nome}}</h5>
           </div>
         </div>
         <div class="row data">
@@ -68,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-12 col-sm-12 col-12 top-margin-2 bottom-margin-2" *ngFor="let administracao of administracaoClube">
+    <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-12 top-margin-2 bottom-margin-2" *ngFor="let administracao of administracaoClube">
       <div class="club-data-section">
         <div class="row club-data">
           <div class="col-lg-12">
@@ -108,6 +101,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

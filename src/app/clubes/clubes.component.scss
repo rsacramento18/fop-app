@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.clubSelection h5{
+  text-align: center;
+  color: #000000;
+}
+
 .clubSelection img {
   max-width: 5rem;
   height: 5rem;
@@ -56,6 +61,10 @@
   border: 2px solid $bg-secondary-color;
   border-radius: 5px;
   height: 100%;
+}
+
+.club-data-title {
+  margin-bottom: 2rem;
 }
 
 .data {

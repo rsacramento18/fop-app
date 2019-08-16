@@ -8,75 +8,77 @@
     <div class="col-lg-12 bottom-margin-2" *ngFor="let exibition of allExposicoes">
 
       <div class="row">
-        <div class="col-lg-12 exposicao-title">
+        <div class="col-lg-12 exposicao-title bottom-margin-2">
           <h2 class="h2">{{exibition.titulo}}</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 cartaz-exposicao">
-          <img src="../../assets/img/cartaz_exposicao/{{exibition.cartaz}}" onError="this.src='../../assets/not_found.png'" alt="cartaz exposição">
+        <div class="col-lg-4 img-exposicao">
+          <img class="cartaz" *ngIf="exibition.cartaz != null" src="../../assets/img/cartaz_exposicao/{{exibition.cartaz}}" onError="this.src='../../assets/not_found.png'" alt="cartaz exposição">
+          <img class="logo" *ngIf="exibition.cartaz == null" src="../../assets/img/cartaz_exposicao/{{exibition.cartaz}}" onError="this.src='../../assets/not_found.png'" alt="cartaz exposição">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-8">
           <div class="row">
-            <div class="col-lg-12">
-              <h3 class="h3" translate>exibitions.titleSingle</h3>
+            <!-- <div class="col-lg-12">
+              <h3 class="h3" translate>exibitions.organizator</h3>
+            </div> -->
+            <div class="col-lg-6 bottom-margin-2">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h3 class="h3" translate>exibitions.titleSingle</h3>
+                </div>
+                <div class="col-lg-3 field-data">
+                  <h5 class="h5" translate>exibitions.beginExibition</h5>
+                </div>
+                <div class="col-lg-9">
+                  <h5 class="h5">{{exibition.datas.inicioExposicao | date: 'dd/MM/yyyy'}}</h5>
+                </div>
+                <div class="col-lg-3 field-data">
+                  <h5 class="h5" translate>exibitions.endExibition</h5>
+                </div>
+                <div class="col-lg-9">
+                  <h5 class="h5">{{exibition.datas.fimExposicao | date: 'dd/MM/yyyy'}}</h5>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row data">
-            <div class="col-lg-3 field-data">
-              <h5 class="h5" translate>exibitions.beginExibition</h5>
+            <div class="col-lg-6 bottom-margin-2">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h3 class="h3" translate>exibitions.inscricao</h3>
+                </div>
+                <div class="col-lg-3 field-data">
+                  <h5 class="h5" translate>exibitions.beginExibition</h5>
+                </div>
+                <div class="col-lg-9">
+                  <h5 class="h5">{{exibition.datas.inicioInscricao | date: 'dd/MM/yyyy'}}</h5>
+                </div>
+                <div class="col-lg-3 field-data">
+                  <h5 class="h5" translate>exibitions.endExibition</h5>
+                </div>
+                <div class="col-lg-9">
+                  <h5 class="h5">{{exibition.datas.fimInscricao | date: 'dd/MM/yyyy'}}</h5>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.inicioExposicao | date: 'dd/MM/yyyy'}}</h5>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h3 class="h3" translate>exibitions.morada</h3>
+                </div>
+                <div class="col-lg-12">
+                  <h5 class="h5">{{exibition.morada}}</h5>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row data bottom-margin-2">
-            <div class="col-lg-3 field-data">
-              <h5 class="h5" translate>exibitions.endExibition</h5>
-            </div>
-            <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.fimExposicao | date: 'dd/MM/yyyy'}}</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="h3" translate>exibitions.inscricao</h3>
-            </div>
-          </div>
-          <div class="row data">
-            <div class="col-lg-3 field-data">
-              <h5 class="h5" translate>exibitions.beginExibition</h5>
-            </div>
-            <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.inicioInscricao | date: 'dd/MM/yyyy'}}</h5>
-            </div>
-          </div>
-          <div class="row data bottom-margin-2">
-            <div class="col-lg-3 field-data">
-              <h5 class="h5" translate>exibitions.endExibition</h5>
-            </div>
-            <div class="col-lg-9">
-              <h5 class="h5">{{exibition.datas.fimInscricao | date: 'dd/MM/yyyy'}}</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="h3" translate>exibitions.morada</h3>
-            </div>
-          </div>
-          <div class="row data bottom-margin-2">
-            <div class="col-lg-12">
-              <h5 class="h5">{{exibition.morada}}</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="h3" translate>exibitions.nib</h3>
-            </div>
-          </div>
-          <div class="row data">
-            <div class="col-lg-12">
-              <h5 class="h5">{{exibition.nib}}</h5>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h3 class="h3" translate>exibitions.nib</h3>
+                </div>
+                <div class="col-lg-12">
+                  <h5 class="h5">{{exibition.nib}}</h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
